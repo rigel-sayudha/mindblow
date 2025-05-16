@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sign up | Smart Fashion</title>
+    <title>Sign up | Mindblow</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -65,13 +65,13 @@
     <div class="signup-form">
         <form action="" method="post">
             <h2>Create an Account</h2>
-            <p class="hint-text">Sign up with your social media account or email address</p>
-            <div class="social-btn text-center">
+            <p class="hint-text">Sign up with email address</p>
+            <!-- <div class="social-btn text-center">
                 <a href="#" class="btn btn-primary btn-lg"><i class="fa fa-facebook"></i> Facebook</a>
                 <a href="#" class="btn btn-info btn-lg"><i class="fa fa-twitter"></i> Twitter</a>
                 <a href="#" class="btn btn-danger btn-lg"><i class="fa fa-google"></i> Google</a>
-            </div>
-            <div class="or-seperator"><b>or</b></div>
+            </div> -->
+            <!-- <div class="or-seperator"><b>or</b></div> -->
             <div class="form-group">
                 <input type="text" name="username" class="form-control input-lg" name="username" placeholder="Username" required="required">
             </div>

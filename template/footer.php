@@ -3,18 +3,17 @@
         <footer class="py-3">
             <ul class="nav justify-content-center pb-3 mb-3">
                 <li class="nav-item"><a href="home.php" class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item"><a href="collection.php?collection=men" class="nav-link px-2 text-muted">Men's Fashion</a></li>
-                <li class="nav-item"><a href="collection.php?collection=women" class="nav-link px-2 text-muted">Women's Fashion</a></li>
-                <li class="nav-item"><a href="collection.php?collection=accessories" class="nav-link px-2 text-muted">Accessories</a></li>
-                <li class="nav-item"><a href="lookbook.php" class="nav-link px-2 text-muted">Lookbook</a></li>
-                <li class="nav-item"><a href="customer_care.php" class="nav-link px-2 text-muted">Customer Care</a></li>
+                <li class="nav-item"><a href="collection.php?collection=men" class="nav-link px-2 text-muted">T-Shirt</a></li>
+                <li class="nav-item"><a href="collection.php?hoodie" class="nav-link px-2 text-muted">Hoodie</a></li>
+                <li class="nav-item"><a href="lookbook.php" class="nav-link px-2 text-muted">Catalog</a></li>
+                <li class="nav-item"><a href="customer_care.php" class="nav-link px-2 text-muted">Question</a></li>
                 <?php if(isset($_SESSION['username'])){ ?>
                 <li class="nav-item"><a href="user_profile.php" class="nav-link px-2 text-muted" >Profile</a></li>
                 <?php } else { ?>
                 <li class="nav-item"><a href="log-in.php" class="nav-link px-2 text-muted" >Profile</a></li>
                 <?php } ?>
             </ul>
-            <p class="text-center text-muted"><a class="text-success fw-bold text-decoration-none" href="https://github.com/lubnafathima">&copy; SMART FASHION</a></p>
+            <p class="text-center text-muted"><a class="text-success fw-bold text-decoration-none" href="#">&copy; Clothing Brand</a></p>
         </footer>
     </div>
 

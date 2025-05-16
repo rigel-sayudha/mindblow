@@ -35,9 +35,7 @@ while($row = mysqli_fetch_assoc($all_product)) { ?>
 
 
                     <div class="price-area my-4">
-                        <!-- <p class="old-price mb-1"><del>$20.58</del> </p> -->
-                        <p class="new-price text-bold mb-1">$ <?php echo $row['pPrice']; ?> 
-                            <span class="old-price-discount text-danger fs-5 fw-normal">(20% off)</span>
+                    <p class="new-price text-bold mb-1">Rp. <?php echo number_format($row['pPrice'], 0, ',', '.'); ?></p>
                         </p>
                         <p class="text-secondary mb-1">(Additional tax may apply on checkout)</p>
 
@@ -71,23 +69,27 @@ while($row = mysqli_fetch_assoc($all_product)) { ?>
 
                 <div class="product-details my-4">
                     <p class="details-title text-color mb-1">Product Details</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat excepturi
-                        odio recusandae aliquid ad impedit autem commodi earum voluptatem laboriosam? </p>
+                    <p class="description">
+                        <?php 
+                        // Tampilkan detail produk dari kolom pDetails jika ada, jika tidak tampilkan pesan default
+                        echo !empty($row['pDetails']) ? $row['pDetails'] : 'No product details available.'; 
+                        ?>
+                    </p>
                 </div>
-                <div class="product-details my-4">
+                <!-- <div class="product-details my-4">
                     <p class="details-title text-color mb-2">Material & Care</p>
                     <ul>
                         <li>Cotton</li>
                         <li>Machine-wash</li>
                     </ul>
-                </div>
-                <div class="product-details my-4">
+                </div> -->
+                <!-- <div class="product-details my-4">
                     <p class="details-title text-color mb-2">Sold by</p>
                     <ul>
                         <li>Cotton</li>
                         <li>Machine-wash</li>
                     </ul>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
@@ -107,7 +109,7 @@ while($row = mysqli_fetch_assoc($all_product)) { ?>
                 <div class="similar-product text-center">
                     <img class="w-100" src="<?php echo $sRow['pImg']; ?>" alt="Preview">
                     <p class="title"><?php echo $sRow['pName']; ?></p>
-                    <p class="price">$ <?php echo $sRow['pPrice']; ?></p>
+                    <p class="price">Rp. <?php echo number_format($sRow['pPrice'], 0, ',', '.'); ?></p>
                     <a href="product.php?pId=<?php echo $sRow['pId'] ?>" type="button" class="btn btn-dark w-100">Quick View</a>
                 </div>
             </div>

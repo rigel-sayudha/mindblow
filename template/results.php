@@ -166,7 +166,7 @@
                                                 <img src="<?= $prod_item['pImg']; ?>" class="card-img-top" alt="new1">
                                                 <div class="card-body">
                                                     <p class="card-head text-center" style="text-transform: uppercase;"><?= $prod_item['pName']; ?></p>
-                                                    <p class="card-para text-center">$ <?= $prod_item['pPrice']; ?></p>
+                                                    <p class="card-para text-center">Rp. <?= $prod_item['pPrice']; ?></p>
                                                     <button type="button" class="btn btn-dark w-100">Add to cart</button>
                                                 </div>
                                             </div>
@@ -192,7 +192,7 @@
                                                 <img src="<?= $prod_item['pImg']; ?>" class="card-img-top" alt="new1">
                                                 <div class="card-body">
                                                     <p class="card-head text-center" style="text-transform: uppercase;"><?= $prod_item['pName']; ?></p>
-                                                    <p class="card-para text-center">$ <?= $prod_item['pPrice']; ?></p>
+                                                    <p class="card-para text-center">Rp. <?= $prod_item['pPrice']; ?></p>
                                                     <button type="button" class="btn btn-dark w-100">Add to cart</button>
                                                 </div>
                                             </div>
@@ -218,7 +218,7 @@
                                                 <img src="<?= $prod_item['pImg']; ?>" class="card-img-top" alt="new1">
                                                 <div class="card-body">
                                                     <p class="card-head text-center" style="text-transform: uppercase;"><?= $prod_item['pName']; ?></p>
-                                                    <p class="card-para text-center">$ <?= $prod_item['pPrice']; ?></p>
+                                                    <p class="card-para text-center">Rp. <?= $prod_item['pPrice']; ?></p>
                                                     <button type="button" class="btn btn-dark w-100">Add to cart</button>
                                                 </div>
                                             </div>
@@ -242,7 +242,7 @@
                                             <img src="<?= $prod_item['pImg']; ?>" class="card-img-top" alt="new1">
                                             <div class="card-body">
                                                 <p class="card-head text-center" style="text-transform: uppercase;"><?= $prod_item['pName']; ?></p>
-                                                <p class="card-para text-center">$ <?= $prod_item['pPrice']; ?></p>
+                                                <p class="card-para text-center">Rp. <?= $prod_item['pPrice']; ?></p>
                                                 <button type="button" class="btn btn-dark w-100">Add to cart</button>
                                             </div>
                                         </div>

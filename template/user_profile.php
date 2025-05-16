@@ -25,6 +25,32 @@ if(isset($_POST['submit'])) {
         <?php
     }
 }
+
+if (isset($_POST['changePassword'])) {
+    $currentPassword = $_POST['currentPassword'];
+    $newPassword = $_POST['newPassword'];
+    $confirmPassword = $_POST['confirmPassword'];
+
+    $userQuery = "SELECT * FROM registration WHERE username='{$_SESSION['username']}'";
+    $userResult = $con->query($userQuery);
+    $userData = mysqli_fetch_assoc($userResult);
+
+    if (password_verify($currentPassword, $userData['password'])) {
+        if ($newPassword === $confirmPassword) {
+            $hashedPassword = password_hash($newPassword, PASSWORD_BCRYPT);
+            $updateQuery = "UPDATE registration SET password='$hashedPassword' WHERE username='{$_SESSION['username']}'";
+            if ($con->query($updateQuery)) {
+                echo "<script>alert('Password berhasil diubah!');</script>";
+            } else {
+                echo "<script>alert('Terjadi kesalahan saat mengubah password.');</script>";
+            }
+        } else {
+            echo "<script>alert('Password baru dan konfirmasi tidak cocok.');</script>";
+        }
+    } else {
+        echo "<script>alert('Password lama salah.');</script>";
+    }
+}
 ?>
 
 <head>
@@ -95,6 +121,27 @@ if(isset($_POST['submit'])) {
                                 <h3>You haven't placed any orders yet.</h3>
                                 <a href="home.php" class="text-decoration-none">Start Browsing</a>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content p-5">
+                        <div id="account" class="tab-pane fade in active">
+                            <h3>Ubah Password</h3>
+                            <form action="" method="POST">
+                                <div class="mb-3">
+                                    <label for="currentPassword" class="form-label">Password Lama</label>
+                                    <input type="password" class="form-control" id="currentPassword" name="currentPassword" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="newPassword" class="form-label">Password Baru</label>
+                                    <input type="password" class="form-control" id="newPassword" name="newPassword" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label">Konfirmasi Password Baru</label>
+                                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                                </div>
+                                <button type="submit" name="changePassword" class="btn btn-primary">Ubah Password</button>
+                            </form>
                         </div>
                     </div>
                 </div>

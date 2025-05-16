@@ -8,7 +8,7 @@ require_once 'dbcon.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin | Smart Fashion</title>
+    <title>Admin | Mindblow</title>
     <link rel="stylesheet" href="../static/admin.css">
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
     <!-- Bootstrap -->
@@ -31,7 +31,7 @@ require_once 'dbcon.php';
                         <h6>200+ Online <i class="fa fa-circle text-success" aria-hidden="true"></i></h6>
                     </div>
                     <div class="d-flex flex-row text-white">
-                        <div class="p-4 bg-primary text-center skill-block">
+                        <!-- <div class="p-4 bg-primary text-center skill-block">
                             <h4>10K+</h4>
                             <h6>Customer</h6>
                         </div>
@@ -46,7 +46,7 @@ require_once 'dbcon.php';
                         <div class="p-3 bg-danger text-center skill-block">
                             <h4>5+ years</h4>
                             <h6>of service</h6>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
