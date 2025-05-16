@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2025 at 10:37 AM
+-- Generation Time: May 16, 2025 at 05:26 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -80,15 +80,22 @@ CREATE TABLE `products` (
   `pQty` int(255) NOT NULL,
   `pDetails` text NOT NULL,
   `pCollection` varchar(255) NOT NULL,
-  `pImg` varchar(255) NOT NULL
+  `pImg` varchar(255) NOT NULL,
+  `pAImg` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`pId`, `pName`, `pPrice`, `pQty`, `pDetails`, `pCollection`, `pImg`) VALUES
-(24, 'Hoodie Black Boxy Fit', 399000, 5, '', 'Hoodie', '../uploads/MindBlow 2-71.jpg');
+INSERT INTO `products` (`pId`, `pName`, `pPrice`, `pQty`, `pDetails`, `pCollection`, `pImg`, `pAImg`) VALUES
+(24, 'Hoodie Black Boxy Fit', 399000, 5, 'Black Hoodie', 'Hoodie', '../uploads/MindBlow 2-71.jpg', '../uploads/MindBlow 2-71.jpg'),
+(25, 'Oversize black scuba', 249000, 15, '', 'T-Shirt', '../uploads/MindBlow 2-64.jpg', ''),
+(26, 'Oversize brown cotton fleece', 199000, 25, '', 'T-Shirt', '../uploads/MindBlow 2-99.jpg', ''),
+(27, 'Oversize grey cotton fleece ', 199000, 25, '', 'T-Shirt', '../uploads/MindBlow 2-10.jpg', ''),
+(28, 'Oversize white scuba ', 249000, 25, '', 'T-Shirt', '../uploads/MindBlow-106.jpg', ''),
+(29, 'Hoodie brown boxy fit ', 399000, 25, '', 'Hoodie', '../uploads/MindBlow 2-177.jpg', ''),
+(30, 'Hoodie grey boxy fit', 399000, 25, '', 'Hoodie', '../uploads/MindBlow 3-99.jpg', '');
 
 -- --------------------------------------------------------
 
@@ -114,7 +121,7 @@ CREATE TABLE `registration` (
 
 INSERT INTO `registration` (`id`, `username`, `email`, `profile`, `number`, `address`, `status`, `password`, `cpassword`) VALUES
 (1, 'admin', 'admin@admin.com', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtVwUoQz0A0BFEsRVq4gLh2KMy4l8RCY8ExP9cXDg4xgr1z1u3RmqLRvNLB-DMPNIuIeM&usqp=CAU', '', '', 'Active', '$2y$10$VxxOau4mCH4dGap9GTDRB.BxGQ8V4rNI./D76VYmOXYuyxMrzN8Wm', '$2y$10$Bcun6P87FSp8yBr/N/nyYej5KtfjoviY/SyRI.qGNyUSiEzqmwwGG'),
-(7, 'olell', 'aurellwienanda@gmail.com', '', '', '', 'Active', '$2y$10$DzNiOBL9ePpBYzStaq3dd.D4hKMkY33RyronnxmdmEwYTIh4fANbu', '$2y$10$mlmwiB7w5LXUKnOw.gqaf.h07302Slwj4ULx4CduKMumHJnC/dl5i');
+(7, 'olell', 'aurellwienanda@gmail.com', '', '', '', 'Active', '$2y$10$TK12g.eZ4mo0RZ7YATZ00.HwnesqurWt0HubIxPUYwfdkZqDJg7sW', '$2y$10$mlmwiB7w5LXUKnOw.gqaf.h07302Slwj4ULx4CduKMumHJnC/dl5i');
 
 --
 -- Indexes for dumped tables
@@ -164,7 +171,7 @@ ALTER TABLE `collection_table`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `pId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `pId` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `registration`
